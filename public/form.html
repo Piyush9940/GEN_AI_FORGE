@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://localhost:5000; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+  
+  <title>HemoScan • AI-Powered CBC Analysis</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="form-card">
+    <div class="header-row">
+      <div class="title-section">
+        <h1><span>🩺</span> HemoScan · CBC</h1>
+        <div class="sub">AI Diagnostic Gateway</div>
+      </div>
+      <div class="action-buttons">
+        <button class="btn btn-outline" id="analyseBtn">
+          <i>🔬</i> Analyse
+        </button>
+        <button class="btn btn-outline" id="printBtn">
+          <i>🖨️</i> Print / PDF
+        </button>
+        <button class="btn btn-primary" id="downloadBtn">
+          <i>⬇️</i> Download Report
+        </button>
+      </div>
+    </div>
+
+    <form id="patientForm" class="form-grid">
+      <div class="field-group field-group--full">
+        <label class="field-label"><span class="icon">👤</span> Full name</label>
+        <input type="text" id="fullName" placeholder="e.g. Piyush Kumar Singh" required autocomplete="off">
+      </div>
+
+      <div class="field-group field-group--full">
+        <label class="field-label"><span class="icon">📞</span> Contact Number</label>
+        <input type="tel" id="phone" placeholder="e.g. 9876543210" required>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">📆</span> Age <span class="field-unit">(years)</span></label>
+        <input type="number" id="age" min="0" max="120" placeholder="Enter age" required>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">⚥</span> Gender</label>
+        <div class="gender-group">
+          <label class="gender-option"><input type="radio" name="gender" value="female"> Female</label>
+          <label class="gender-option"><input type="radio" name="gender" value="male"> Male</label>
+          <label class="gender-option"><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">🧪</span> Hemoglobin (HB) <span class="field-unit">(g/dL)</span></label>
+        <input type="number" id="hp" step="0.1" placeholder="Value">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">🩸</span> RBC Count <span class="field-unit">(M/µL)</span></label>
+        <input type="number" id="rbc" step="0.1" placeholder="Value">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">⚖️</span> PCV (Hematocrit) <span class="field-unit">(%)</span></label>
+        <input type="number" id="pcv" step="0.1" placeholder="Value">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">📏</span> MCV <span class="field-unit">(fL)</span></label>
+        <input type="number" id="mcv" step="0.1" placeholder="Value">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">⚖️</span> MCH <span class="field-unit">(pg)</span></label>
+        <input type="number" id="mch" step="0.1" placeholder="Value">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label"><span class="icon">📊</span> MCHC <span class="field-unit">(g/dL)</span></label>
+        <input type="number" id="mchc" step="0.1" placeholder="Value">
+      </div>
+    </form>
+
+    <div class="footer-note">
+      <span>AI Diagnosis provided by Gemini 1.5 Pro via HemoScan Pipeline</span>
+    </div>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

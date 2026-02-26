@@ -1,0 +1,398 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+      background: #f8fafd;
+      color: #152b42;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* smooth gradient background */
+    .hospital-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(at 80% 10%, #d4e3ff 0%, #f1f7fe 70%, #ffffff 100%);
+      z-index: -2;
+    }
+
+    .soft-grid {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: 
+        linear-gradient(rgba(190, 215, 255, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(190, 215, 255, 0.2) 1px, transparent 1px);
+      background-size: 60px 60px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* ---------- TOP BAR (EMERGENCY / CONTACT) ---------- */
+    .top-bar {
+      background: rgba(12, 45, 78, 0.9);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      border-bottom: 3px solid #2b7fc2;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-info i, .emergency i {
+      margin-right: 8px;
+      color: #75c0ff;
+    }
+
+    .emergency {
+      font-weight: 700;
+    }
+
+    /* ---------- NAVBAR (hospital style) ---------- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0 15px;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 1px solid rgba(0, 55, 100, 0.1);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      margin-top: 5px;
+      border-radius: 70px;
+      padding-left: 30px;
+      padding-right: 30px;
+      box-shadow: 0 15px 30px -15px rgba(0,60,130,0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #043668;
+    }
+
+    .logo i {
+      font-size: 2.5rem;
+      color: #005fa3;
+      background: white;
+      border-radius: 30px;
+      padding: 8px;
+      box-shadow: 0 8px 14px #a5c9ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #152b42;
+      transition: 0.2s;
+      font-size: 1.05rem;
+    }
+
+    .nav-links a:hover {
+      color: #006bb3;
+    }
+
+    .appointment-btn {
+      background: #0b4a7c;
+      color: white !important;
+      padding: 12px 28px;
+      border-radius: 60px;
+      box-shadow: 0 10px 18px -8px #0b4a7c;
+      transition: 0.2s;
+    }
+
+    .appointment-btn:hover {
+      background: #0f5f9e;
+      transform: scale(1.02);
+    }
+
+    /* ---------- HERO (hospital welcome + AI integration) ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 50px;
+      margin: 40px 0 60px;
+      align-items: center;
+    }
+
+    .hero-welcome {
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(5px);
+      border-radius: 40px;
+      padding: 30px 35px;
+      border: 1px solid white;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #e7f1ff;
+      border-radius: 60px;
+      padding: 8px 22px;
+      font-weight: 600;
+      color: #0b4a7c;
+      margin-bottom: 20px;
+      border: 1px solid #cddfff;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #022844;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(130deg, #014786, #2f94d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #1f405e;
+      margin-bottom: 30px;
+    }
+
+    .stats-mini {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .stat-item {
+      background: white;
+      border-radius: 40px;
+      padding: 12px 24px;
+      font-weight: 600;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.02);
+    }
+
+    /* Right side - AI anemia panel (still present but integrated as hospital tech) */
+    .ai-preview-card {
+      background: rgba(255,255,255,0.35);
+      backdrop-filter: blur(15px);
+      border-radius: 48px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 0 30px 45px -20px #02284433;
+    }
+
+    .ai-preview-header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-bottom: 2px dashed #bedaff;
+      padding-bottom: 20px;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .ai-badge-small {
+      background: #00497e;
+      color: white;
+      border-radius: 60px;
+      padding: 6px 16px;
+      font-size: 1rem;
+      margin-left: auto;
+    }
+
+    /* ---------- DEPARTMENTS / SERVICES (hospital like) ---------- */
+    .section-caption {
+      text-align: center;
+      margin: 70px 0 20px;
+    }
+
+    .section-caption h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #022844;
+    }
+
+    .section-caption p {
+      font-size: 1.2rem;
+      color: #365d7e;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    .dept-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .dept-card {
+      background: white;
+      border-radius: 40px;
+      padding: 35px 25px;
+      box-shadow: 0 20px 30px -15px #b0c8e0;
+      transition: 0.3s;
+      border: 1px solid #e4efff;
+    }
+
+    .dept-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 40px -15px #7ca2cc;
+    }
+
+    .dept-icon {
+      font-size: 3rem;
+      background: #e3f0ff;
+      width: 80px; height: 80px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: #00437a;
+    }
+
+    .dept-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    /* HemoScan AI highlight feature (special) */
+    .ai-showcase {
+      background: linear-gradient(105deg, #03263f 0%, #104e7a 100%);
+      border-radius: 70px;
+      padding: 60px 50px;
+      color: white;
+      margin: 60px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .ai-showcase h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .ai-showcase ul {
+      list-style: none;
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    .ai-showcase li {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ai-showcase .btn-light {
+      background: white;
+      color: #022844;
+      padding: 16px 40px;
+      border-radius: 60px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    /* ---------- DOCTOR / TEAM (hospital trust) ---------- */
+    .team-section {
+      margin: 80px 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .doctor-card {
+      background: white;
+      border-radius: 50px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid #ddeeff;
+    }
+
+    .doctor-img {
+      width: 120px; height: 120px;
+      background: #c2ddff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #00315e;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- PATIENT TESTIMONIAL / IMPACT ---------- */
+    .testimonial-block {
+      background: #ebf3ff;
+      border-radius: 90px;
+      padding: 50px;
+      margin: 50px 0;
+      position: relative;
+    }
+
+    /* ---------- FOOTER (hospital info) ---------- */
+    .footer {
+      background: #032d49;
+      color: white;
+      border-radius: 60px 60px 0 0;
+      padding: 50px 40px 30px;
+      margin-top: 80px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    /* responsiveness */
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; }
+      .dept-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .ai-showcase { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .dept-grid, .team-grid, .footer-grid { grid-template-columns: 1fr; }
+    }

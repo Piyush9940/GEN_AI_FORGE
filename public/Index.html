@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HemoScan Health · Integrated AI Hospital System</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + Plus Jakarta Sans (modern medical) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+  <div class="hospital-bg"></div>
+  <div class="soft-grid"></div>
+
+  <!-- TOP BAR (hospital contact) -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="contact-info">
+        <i class="fas fa-phone-alt"></i> +91 9876543210  |  <i class="fas fa-envelope"></i> contact@hemoscanhealth.org
+      </div>
+      <div class="emergency">
+        <i class="fas fa-exclamation-triangle"></i> 24/7 EMERGENCY · 9876543210
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- NAVBAR (hospital style) -->
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fas fa-hospital-user"></i> HemoScan<span style="font-weight:400; color:#2f6b9c;"> Health</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Departments</a>
+        <a href="#" onclick="window.location.href='form.html'">For Patients</a>
+        <a href="#">Reports</a>
+        <a href="#">Contact</a>
+      </div>
+      <a href="#" class="appointment-btn"><i class="fas fa-calendar-check"></i> Appointment</a>
+    </nav>
+
+    <!-- HERO section with hospital message + AI anemia preview -->
+    <div class="hero">
+      <div class="hero-welcome">
+        <div class="hero-badge"><i class="fas fa-stethoscope"></i>  Welcome to HemoScan Health Network</div>
+        <h1>Where advanced <span>AI meets</span> compassionate care</h1>
+        <p>Integrated hospital system with real‑time anemia detection, LLM imaging, and electronic records — all in one platform. Now serving 12 regional hospitals.</p>
+        <div class="stats-mini">
+          <span class="stat-item"><i class="fas fa-user-md"></i> 150+ specialists</span>
+          <span class="stat-item"><i class="fas fa-flask"></i> 94.3% diagnostic acc.</span>
+          <span class="stat-item"><i class="fas fa-bed"></i> 340 beds</span>
+        </div>
+        <div style="margin-top: 25px;">
+          <a href="#" class="appointment-btn" style="background:#1f6290; display:inline-block; text-decoration:none;">Find a doctor</a>
+          <a href="#" style="margin-left:20px; color:#043668; font-weight:600;">Explore services →</a>
+        </div>
+      </div>
+      <div class="ai-preview-card">
+        <div class="ai-preview-header">
+          <i class="fas fa-robot" style="color:#00437a;"></i> HemoScan AI · instant anemia
+          <span class="ai-badge-small">LIVE</span>
+        </div>
+        <!-- CBC mini panel (friendly) -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0;">
+          <div style="background:white; border-radius:25px; padding:15px;"><span style="color:#3e6190;">HGB</span> <strong>8.9 g/dL</strong></div>
+          <div style="background:white; border-radius:25px; padding:15px;"><span style="color:#3e6190;">MCH</span> <strong>25.8 pg</strong></div>
+          <div style="background:white; border-radius:25px; padding:15px;"><span style="color:#3e6190;">MCV</span> <strong>76.4 fL</strong></div>
+          <div style="background:white; border-radius:25px; padding:15px;"><span style="color:#3e6190;">MCHC</span> <strong>30.1 g/dL</strong></div>
+        </div>
+        <div style="background:#e0f0ff; border-radius:40px; padding:18px; display:flex; justify-content:space-between; font-weight:600;">
+          <span><i class="fas fa-exclamation-circle" style="color:#b34141;"></i> Anemia risk: moderate</span>
+          <span style="background:#00437a; color:white; padding:5px 18px; border-radius:40px;">95.2% conf</span>
+        </div>
+        <div style="margin-top:20px; background:white; border-radius:30px; padding:14px 20px;">
+          <i class="fas fa-bell" style="color:#c44545;"></i> Emergency contact: Twilio alert sent (simulated) · on‑call notified
+        </div>
+        <p style="margin-top:15px; font-size:0.9rem;"><i class="fas fa-x-ray"></i> LLM imaging: Chest X‑ray, no acute findings. MRI brain scheduled.</p>
+      </div>
+    </div>
+
+    <!-- DEPARTMENTS & SERVICES (hospital focus) -->
+    <div class="section-caption">
+      <h2>Clinical departments & specialized AI</h2>
+      <p>Every module integrates HemoScan AI for real‑time diagnostics and workflow</p>
+    </div>
+    <div class="dept-grid">
+      <div class="dept-card">
+        <div class="dept-icon"><i class="fas fa-droplet"></i></div>
+        <h3>Hematology</h3>
+        <p>Anemia risk (Ridge classifier), CBC analysis, bleeding disorder screening. 94% accuracy.</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon"><i class="fas fa-brain"></i></div>
+        <h3>Neurology</h3>
+        <p>MRI auto‑reports by LLM, stroke assessment, seizure prediction copilot.</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon"><i class="fas fa-heart-pulse"></i></div>
+        <h3>Cardiology</h3>
+        <p>ECG trends, vitals alerting, echo AI measurements. Twilio emergency integration.</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon"><i class="fas fa-x-ray"></i></div>
+        <h3>Radiology</h3>
+        <p>LLM‑powered X‑ray, MRI, CT report generation. Structured findings in seconds.</p>
+      </div>
+    </div>
+
+    <!-- HemoScan AI SHOWCASE (detailed but hospital oriented) -->
+    <div class="ai-showcase">
+      <div>
+        <h2>Your hospital copilot: AI that actively participates</h2>
+        <ul>
+          <li><i class="fas fa-check-circle" style="color:#a2d6ff;"></i> Real‑time anemia detection (HGB, MCH, MCHC, MCV) with confidence scoring</li>
+          <li><i class="fas fa-check-circle" style="color:#a2d6ff;"></i> LLM radiology assistant: X‑ray / MRI reports in seconds</li>
+          <li><i class="fas fa-check-circle" style="color:#a2d6ff;"></i> Emergency alerts via Twilio & Nodemailer to on‑call team</li>
+          <li><i class="fas fa-check-circle" style="color:#a2d6ff;"></i> Role‑based access (RBAC) · fully HIPAA‑ready</li>
+        </ul>
+        <button class="btn-light" onclick="demoAlert()"><i class="fas fa-play"></i> See live demo</button>
+      </div>
+      <div style="background: #ffffff15; border-radius: 60px; padding: 30px; backdrop-filter: blur(8px);">
+        <i class="fas fa-chart-line" style="font-size: 3rem;"></i>
+        <h3 style="font-size:2rem;">95.21%</h3>
+        <p>Anemia classification confidence (validated on 14k samples)</p>
+        <hr style="border-top:2px solid white; opacity:0.2;">
+        <p><i class="fas fa-clock"></i> 2.1 sec avg. report generation</p>
+      </div>
+    </div>
+
+    <!-- MEET OUR TEAM (hospital trust) -->
+    <div class="section-caption">
+      <h2>Leading medical & AI team</h2>
+      <p>Physicians and engineers working side by side</p>
+    </div>
+    <div class="team-grid">
+      <div class="doctor-card">
+        <div class="doctor-img"><i class="fas fa-user-md"></i></div>
+        <h3>Dr. Sarah Chen</h3>
+        <p>Chief of Hematology, 20y experience. Lead clinical AI trainer.</p>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-img"><i class="fas fa-user-tie"></i></div>
+        <h3>Dr. Michael Okafor</h3>
+        <p>Medical director, specialist in LLM diagnostic integration.</p>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-img"><i class="fas fa-user-nurse"></i></div>
+        <h3>Dr. Priya Kapoor</h3>
+        <p>Head of radiology AI · pioneered X‑ray auto‑reporting.</p>
+      </div>
+    </div>
+
+    <!-- PATIENT TESTIMONIAL / IMPACT -->
+    <div class="testimonial-block">
+      <i class="fas fa-quote-left" style="font-size:3rem; opacity:0.4;"></i>
+      <p style="font-size:1.8rem; font-weight:500; max-width:800px;">“The AI anemia detection alerted us to a critical patient 6 hours earlier than traditional labs. Absolutely life‑saving.”</p>
+      <p style="margin-top:20px;"><strong>— Dr. Elena Voss, ER director</strong></p>
+      <div style="display:flex; gap:30px; margin-top:30px;">
+        <span><i class="fas fa-hospital"></i> 8,200+ patients screened</span>
+        <span><i class="fas fa-file-prescription"></i> 1,400+ LLM reports</span>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS / HOSPITAL INFO (removed tech stack and innovation) -->
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; background: white; border-radius: 70px; padding: 40px; margin: 40px 0;">
+      <div><h3><i class="fas fa-briefcase-medical"></i> For patients</h3>
+        <p>Appointment, medical records, bill pay, patient portal.</p>
+      </div>
+      <div><h3><i class="fas fa-flask"></i> Research</h3>
+        <p>Clinical trials, AI ethics board, publications.</p>
+      </div>
+      <div><h3><i class="fas fa-globe"></i> Locations</h3>
+        <p>6 cities · 12 clinics. Find nearest HemoScan facility.</p>
+      </div>
+    </div>
+
+    <!-- FOOTER (hospital details) -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h4>HemoScan Health</h4>
+          <p>2500 Medical Center Drive, Suite 400<br>Philadelphia, PA 19104</p>
+        </div>
+        <div>
+          <h4>Departments</h4>
+          <p>Hematology · Cardiology · Neurology · Radiology · AI Diagnostics</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> 9876543210<br> <i class="fas fa-envelope"></i> hello@hemoscan.org</p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <i class="fab fa-linkedin fa-2x" style="margin-right:10px;"></i>
+          <i class="fab fa-twitter fa-2x"></i>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:50px;">&copy; 2026 HemoScan Health Network. All rights reserved. HIPAA compliant.</div>
+    </footer>
+  </div>
+  <script src="Index.js"></script>
+</body>
+</html>

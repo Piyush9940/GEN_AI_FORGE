@@ -1,0 +1,264 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef4fc;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      color: #1a3349;
+    }
+
+    /* main card */
+    .form-card {
+      max-width: 1140px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 36px;
+      box-shadow: 0 25px 45px -18px rgba(0, 45, 75, 0.3);
+      padding: 2.2rem 2.5rem;
+      transition: box-shadow 0.3s;
+      animation: cardFade 0.6s ease-out;
+    }
+
+    @keyframes cardFade {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* header with two buttons on top */
+    .header-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+
+    .title-section h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      background: linear-gradient(145deg, #123b59, #0a4a78);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title-section .sub {
+      font-size: 0.9rem;
+      color: #5b7897;
+      margin-top: 4px;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      background: white;
+      padding: 0.7rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 5px 14px rgba(0, 35, 70, 0.1);
+      cursor: pointer;
+      transition: 0.2s ease;
+      border: 1px solid rgba(70, 130, 190, 0.2);
+      color: #1d4465;
+    }
+
+    .btn-primary {
+      background: #1a405e;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 16px -8px #1b3f5c;
+    }
+
+    .btn-primary:hover {
+      background: #22547a;
+      transform: translateY(-3px);
+      box-shadow: 0 18px 22px -12px #1d4f73;
+    }
+
+    .btn-outline:hover {
+      background: #e6f0fc;
+      border-color: #7da5d1;
+      transform: translateY(-2px);
+    }
+
+    /* form grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem 2rem;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .field-group--full {
+      grid-column: 1 / -1;
+    }
+
+    .field-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      color: #1f4a6e;
+    }
+
+    .field-label .icon {
+      background: #e1effb;
+      border-radius: 30px;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .field-unit {
+      font-weight: 400;
+      color: #6383a3;
+      font-size: 0.75rem;
+      margin-left: 0.2rem;
+      text-transform: lowercase;
+    }
+
+    /* all inputs are empty */
+    input, select {
+      background: #ffffff;
+      border: 1.8px solid #dae3ef;
+      border-radius: 20px;
+      padding: 0.85rem 1.3rem;
+      font-size: 1rem;
+      font-weight: 450;
+      color: #102b3b;
+      transition: all 0.2s;
+      outline: none;
+      width: 100%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    input:focus, select:focus {
+      border-color: #1d7ac7;
+      box-shadow: 0 4px 14px -6px #1d7ac7;
+      background: #fcfdff;
+    }
+
+    /* gender group */
+    .gender-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+      background: #f9fcff;
+      border: 1.8px solid #dae3ef;
+      border-radius: 40px;
+      padding: 0.3rem 1.8rem;
+      min-height: 60px;
+    }
+
+    .gender-option {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      font-weight: 500;
+      color: #1d3b57;
+    }
+
+    .gender-option input[type="radio"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #86a9ce;
+      border-radius: 50%;
+      padding: 0;
+      background: white;
+      transition: 0.1s;
+      box-shadow: none;
+      margin: 0;
+    }
+
+    .gender-option input[type="radio"]:checked {
+      border: 6px solid #1a6bb0;
+      background: white;
+    }
+
+    .gender-option input[type="radio"]:focus-visible {
+      outline: 2px solid #1a6bb0;
+    }
+
+    /* footer note */
+    .footer-note {
+      margin-top: 2rem;
+      border-top: 2px solid #e3eefb;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      color: #7f9bb9;
+      font-size: 0.8rem;
+    }
+
+    /* responsive */
+    @media (max-width: 850px) {
+      .form-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-card { padding: 1.8rem; }
+    }
+
+    @media (max-width: 650px) {
+      .header-row { flex-direction: column; align-items: start; }
+      .action-buttons { width: 100%; }
+      .btn { flex: 1; justify-content: center; }
+    }
+
+    @media (max-width: 550px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .gender-group { gap: 1rem; padding: 0.8rem; }
+    }
+
+    /* field animation */
+    .field-group {
+      animation: slideFade 0.4s ease backwards;
+    }
+    .field-group:nth-child(1) { animation-delay: 0.02s; }
+    .field-group:nth-child(2) { animation-delay: 0.04s; }
+    .field-group:nth-child(3) { animation-delay: 0.06s; }
+    .field-group:nth-child(4) { animation-delay: 0.08s; }
+    .field-group:nth-child(5) { animation-delay: 0.10s; }
+    .field-group:nth-child(6) { animation-delay: 0.12s; }
+    .field-group:nth-child(7) { animation-delay: 0.14s; }
+    .field-group:nth-child(8) { animation-delay: 0.16s; }
+    .field-group:nth-child(9) { animation-delay: 0.18s; }
+
+    @keyframes slideFade {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
