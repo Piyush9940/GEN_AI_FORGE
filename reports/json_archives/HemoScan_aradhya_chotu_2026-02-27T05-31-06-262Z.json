@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_aradhya_chotu_2026-02-27T05-31-06-262Z",
+    "generatedAt": "2026-02-27T05:31:06.266Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "aradhya chotu",
+    "age": 25,
+    "gender": "female",
+    "mob_no": "9468213961",
+    "hb": 10.8,
+    "pcv": 35,
+    "mch": 29.7,
+    "rbc": 4.19,
+    "mcv": 83.6,
+    "mchc": 35.5
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 96.83
+    },
+    "patient_data": {
+      "name": "aradhya chotu",
+      "age": 25,
+      "gender": "female",
+      "mob_no": 9468213961,
+      "hb": 10.8,
+      "pcv": 35,
+      "mch": 29.7,
+      "rbc": 4.19,
+      "mcv": 83.6,
+      "mchc": 35.5
+    },
+    "clinical_report": {
+      "error": "Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    }
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MEDIMETA-AI - Hospital Care Assistant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body class="light-mode">
+<div class="app-container">
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button  type="button" class="new-chat-btn" id="newChatBtn">
+      <i class="fas fa-plus"></i>
+      <span>New chat</span>
+    </button>
+    
+    <div class="history" id="chatHistory">
+      <!-- Chat history items will be added here -->
+    </div>
+    
+    <div class="sidebar-footer">
+      <button class="history-item" id="toggleSidebarBtn">
+        <i class="fas fa-chevron-left"></i>
+        <span>Collapse sidebar</span>
+      </button>
+      <button class="history-item" id="clearChatsBtn">
+        <i class="fas fa-trash-alt"></i>
+        <span>Clear conversations</span>
+      </button>
+      <button class="history-item" id="accountBtn">
+        <i class="fas fa-user"></i>
+        <span>My account</span>
+      </button>
+      <button class="history-item" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+        <span>Light mode</span>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Main Chat Area -->
+  <div class="chat-container">
+    <div class="chat-header">
+      MEDIMETA-AI - Hospital Care Assistant
+    </div>
+    
+    <div class="chat-box" id="chatBox">
+      <div class="message-container" id="messageContainer">
+        <!-- Messages will be added here -->
+      </div>
+    </div>
+    
+    <div class="input-container">
+      <div class="input-box" id="inputBox">
+        <div id="previewArea"></div>
+        <textarea 
+          class="chat-input" 
+          id="chatInput" 
+          placeholder="Message MEDIMETA-AI..." 
+          rows="1"
+        ></textarea>
+        <button type="button" class="send-btn" id="sendBtn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <div class="input-tools">
+          <button type="button" class="tool-btn" id="imageBtn" title="Attach image">
+            <i class="fas fa-image"></i>
+          </button>
+          <button type="button" class="tool-btn" id="fileBtn" title="Attach file">
+            <i class="fas fa-paperclip"></i>
+          </button>
+          <button  type="button" class="tool-btn" id="micBtn" title="Voice input">
+            <i class="fas fa-microphone"></i>
+          </button>
+        </div>
+        
+        <!-- Hidden file inputs -->
+        <input type="file" id="imageInput" accept="image/*" class="d-none">
+        <input type="file" id="fileInput" accept=".json,application/json"  class="d-none">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile sidebar toggle -->
+  <button  type="button" class="sidebar-toggle" id="sidebarToggle">
+    <i class="fas fa-bars"></i>
+  </button>
+  
+  <!-- Scroll to bottom button -->
+  <button type="button" class="scroll-to-bottom" id="scrollToBottomBtn" title="Scroll to bottom">
+    <i class="fas fa-chevron-down"></i>
+  </button>
+</div>
+<script src="chatbot (1).js"></script>
+</body>
+</html>

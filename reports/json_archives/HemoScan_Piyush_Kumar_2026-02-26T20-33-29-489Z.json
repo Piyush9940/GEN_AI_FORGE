@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_Piyush_Kumar_2026-02-26T20-33-29-489Z",
+    "generatedAt": "2026-02-26T20:33:29.511Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "Piyush Kumar",
+    "age": 0,
+    "gender": "m",
+    "mob_no": "0000000000",
+    "hb": 0,
+    "pcv": 0,
+    "mch": 0,
+    "rbc": 0,
+    "mcv": 0,
+    "mchc": 0
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 98.35
+    },
+    "patient_data": {
+      "name": "Piyush Kumar",
+      "age": 0,
+      "gender": "m",
+      "mob_no": 0,
+      "hb": 0,
+      "pcv": 0,
+      "mch": 0,
+      "rbc": 0,
+      "mcv": 0,
+      "mchc": 0
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "Piyush Kumar",
+        "phone": "0",
+        "age": 0,
+        "gender": "m"
+      },
+      "model_prediction": "Anemic",
+      "confidence_percent": 98.35,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 0,
+          "reference_range": "13.5 - 17.5 g/dL",
+          "status": "Low"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 0,
+          "reference_range": "4.5 - 5.9 million/mcL",
+          "status": "Low"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 0,
+          "reference_range": "41 - 50%",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 0,
+          "reference_range": "80 - 100 fL",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 0,
+          "reference_range": "27 - 33 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 0,
+          "reference_range": "32 - 36 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The provided CBC values are all zero, which is physiologically impossible for a living patient and indicates either a critical data entry error or a severe laboratory reporting issue. If these values were accurate, they would represent a life-threatening state of total bone marrow failure or exsanguination. The ML model correctly identifies this state as Anemic with high confidence, but clinical correlation is required to obtain valid measurements.",
+      "risk_level": "High",
+      "possible_anemia_type": [
+        "Aplastic Anemia",
+        "Severe Iron Deficiency Anemia",
+        "Bone Marrow Failure Syndrome"
+      ],
+      "suggested_diagnostic_tests": [
+        "Immediate Repeat CBC",
+        "Peripheral Blood Smear Examination",
+        "Reticulocyte Count",
+        "Serum Iron and Ferritin Studies",
+        "Bone Marrow Aspiration/Biopsy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_ghj_2026-02-27T05-13-18-319Z",
+    "generatedAt": "2026-02-27T05:13:18.320Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "ghj",
+    "age": 54,
+    "gender": "female",
+    "mob_no": "9468213961",
+    "hb": 1,
+    "pcv": 3,
+    "mch": 5,
+    "rbc": 2,
+    "mcv": 4,
+    "mchc": 6
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 99.33
+    },
+    "patient_data": {
+      "name": "ghj",
+      "age": 54,
+      "gender": "female",
+      "mob_no": 9468213961,
+      "hb": 1,
+      "pcv": 3,
+      "mch": 5,
+      "rbc": 2,
+      "mcv": 4,
+      "mchc": 6
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "ghj",
+        "phone": "9468213961.0",
+        "age": 54,
+        "gender": "female"
+      },
+      "model_prediction": "Anemic",
+      "confidence_percent": 99.33,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 1,
+          "reference_range": "12.0 - 15.5 g/dL",
+          "status": "Low"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 2,
+          "reference_range": "3.90 - 5.03 million/uL",
+          "status": "Low"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 3,
+          "reference_range": "34.9 - 44.5 %",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 4,
+          "reference_range": "80 - 100 fL",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 5,
+          "reference_range": "27 - 31 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 6,
+          "reference_range": "32 - 36 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The patient exhibits critically low levels across all red blood cell indices. A hemoglobin of 1.0 g/dL and a PCV of 3.0% represent a life-threatening medical emergency. The extremely low MCV, MCH, and MCHC indicate a severe microcytic hypochromic anemia. These values are physiologically extreme and require immediate clinical verification and urgent blood transfusion.",
+      "risk_level": "High",
+      "possible_anemia_type": [
+        "Severe Iron Deficiency Anemia",
+        "Thalassemia",
+        "Sideroblastic Anemia"
+      ],
+      "suggested_diagnostic_tests": [
+        "Peripheral Blood Smear",
+        "Serum Ferritin and Iron Studies",
+        "Reticulocyte Count",
+        "Hemoglobin Electrophoresis",
+        "Stool for Occult Blood"
+      ]
+    }
+  }
+}

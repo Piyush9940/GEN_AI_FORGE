@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_Avinash__2026-02-27T04-24-06-602Z",
+    "generatedAt": "2026-02-27T04:24:06.604Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "Avinash ",
+    "age": 21,
+    "gender": "m",
+    "mob_no": "9468213961",
+    "hb": 17.5,
+    "pcv": 34.2,
+    "mch": 26.5,
+    "rbc": 4.1,
+    "mcv": 82,
+    "mchc": 31.5
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Not Anemic",
+      "confidence_percent": 21.83
+    },
+    "patient_data": {
+      "name": "Avinash ",
+      "age": 21,
+      "gender": "m",
+      "mob_no": 9468213961,
+      "hb": 17.5,
+      "pcv": 34.2,
+      "mch": 26.5,
+      "rbc": 4.1,
+      "mcv": 82,
+      "mchc": 31.5
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "Avinash",
+        "phone": "9468213961",
+        "age": 21,
+        "gender": "m"
+      },
+      "model_prediction": "Not Anemic",
+      "confidence_percent": 21.83,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 17.5,
+          "reference_range": "13.5 - 17.5 g/dL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 4.1,
+          "reference_range": "4.5 - 5.9 million/µL",
+          "status": "Low"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 34.2,
+          "reference_range": "41% - 50%",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 82,
+          "reference_range": "80 - 100 fL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 26.5,
+          "reference_range": "27 - 33 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 31.5,
+          "reference_range": "32 - 36 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The patient is classified as 'Not Anemic' due to a high-normal hemoglobin level (17.5 g/dL). However, the data presents a significant physiological inconsistency: the Packed Cell Volume (PCV) of 34.2% and RBC count of 4.1 are low, which contradicts the high hemoglobin value (normally PCV is ~3x Hemoglobin). The low MCH and MCHC suggest hypochromic cells. The extremely low confidence level (21.83%) indicates that the model struggled with these conflicting parameters. A laboratory error or pre-analytical issue is suspected.",
+      "risk_level": "Low",
+      "possible_anemia_type": [
+        "None"
+      ],
+      "suggested_diagnostic_tests": [
+        "Repeat CBC with Peripheral Smear",
+        "Reticulocyte Count",
+        "Iron Studies (Serum Iron, Ferritin, TIBC)",
+        "Correlation with clinical symptoms"
+      ]
+    }
+  }
+}

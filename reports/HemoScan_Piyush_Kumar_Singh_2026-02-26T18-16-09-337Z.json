@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_Piyush_Kumar_Singh_2026-02-26T18-16-09-337Z",
+    "generatedAt": "2026-02-26T18:16:09.340Z",
+    "institution": "Technovative",
+    "version": "HemoScan v2.0"
+  },
+  "patientInput": {
+    "name": "Piyush Kumar Singh",
+    "age": 21,
+    "gender": "m",
+    "mob_no": "9876543210",
+    "hb": 11.5,
+    "pcv": 34.2,
+    "mch": 26.5,
+    "rbc": 4.1,
+    "mcv": 82,
+    "mchc": 31.5
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 96.83
+    },
+    "patient_data": {
+      "name": "Piyush Kumar Singh",
+      "age": 21,
+      "gender": "m",
+      "mob_no": 9876543210,
+      "hb": 11.5,
+      "pcv": 34.2,
+      "mch": 26.5,
+      "rbc": 4.1,
+      "mcv": 82,
+      "mchc": 31.5
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "Piyush Kumar Singh",
+        "phone": "9876543210",
+        "age": 21,
+        "gender": "Male"
+      },
+      "model_prediction": "Anemic",
+      "confidence_percent": 96.83,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 11.5,
+          "reference_range": "13.5 - 17.5 g/dL",
+          "status": "Low"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 4.1,
+          "reference_range": "4.5 - 5.9 million/µL",
+          "status": "Low"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 34.2,
+          "reference_range": "41% - 50%",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 82,
+          "reference_range": "80 - 100 fL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 26.5,
+          "reference_range": "27 - 33 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 31.5,
+          "reference_range": "32 - 36 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The patient exhibits a low hemoglobin level (11.5 g/dL) and reduced RBC count, confirming anemia. The MCV is at the lower threshold of normal (82 fL), while MCH and MCHC are slightly below reference ranges. This suggests a normocytic to mildly microcytic, hypochromic anemia. This profile is commonly associated with early-stage iron deficiency or anemia of chronic disease.",
+      "risk_level": "Moderate",
+      "possible_anemia_type": [
+        "Iron Deficiency Anemia",
+        "Anemia of Chronic Disease",
+        "Mild Thalassemia Trait"
+      ],
+      "suggested_diagnostic_tests": [
+        "Serum Ferritin",
+        "Iron Studies (Serum Iron, TIBC, Transferrin Saturation)",
+        "Peripheral Blood Smear (PBS) Examination",
+        "Reticulocyte Count"
+      ]
+    }
+  }
+}

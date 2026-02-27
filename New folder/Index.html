@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>HemoScan Health · Perfect Navbar Placement</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter, Outfit, Space Grotesk -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Animate on Scroll library (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="Index.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 3D background -->
+  <div class="scene-3d">
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
+  </div>
+  <div class="floating-3d-elements">
+    <div class="float-3d float1"></div>
+    <div class="float-3d float2"></div>
+    <div class="float-3d float3"></div>
+  </div>
+
+  <!-- TOP BAR  -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="contact-info"><i class="fas fa-phone-alt"></i> +91 9876543210 | <i class="fas fa-envelope"></i> contact@hemoscanhealth.org</div>
+      <div class="emergency"><i class="fas fa-exclamation-triangle"></i> 24/7 EMERGENCY · 9876543210</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- NAVBAR - correctly placed below top bar with proper spacing -->
+    <nav class="navbar">
+      <div class="logo"><i class="fas fa-hospital-user"></i> HemoScan Health</div>
+      <div class="nav-links">
+        <a class="active">Home</a>
+        <a onclick="window.location.href='ff.html'">Dashboard</a>
+        <a>For Patients</a>
+        <a onclick="window.location.href='form.html'">Reports</a>
+        <a>Contact</a>
+      </div>
+      <a onclick="window.location.href='chatbot.html'" href="#" class="appointment-btn" onclick="event.preventDefault();"><i class="fas fa-calendar-check"></i> Chatbot</a>
+    </nav>
+
+    <!-- HERO section -->
+    <div class="hero" data-aos="fade-up" data-aos-duration="1000">
+      <div class="hero-welcome" data-aos="fade-right" data-aos-delay="200">
+        <div class="hero-badge"><i class="fas fa-stethoscope"></i> Welcome to HemoScan Health Network</div>
+        <h1>Where advanced <span>AI meets</span> compassionate care</h1>
+        <p>Integrated hospital system with real‑time anemia detection, LLM imaging, and electronic records — all in one platform. Now serving 12 regional hospitals.</p>
+        <div class="stats-mini">
+          <span class="stat-item"><i class="fas fa-user-md"></i> 150+ specialists</span>
+          <span class="stat-item"><i class="fas fa-flask"></i> 94.3% diagnostic acc.</span>
+          <span class="stat-item"><i class="fas fa-bed"></i> 340 beds</span>
+        </div>
+        <div style="margin-top: 25px; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+          <a href="#" class="appointment-btn" style="display:inline-block;" onclick="event.preventDefault(); alert('Find a doctor: use contact page');">Find a doctor</a>
+          <a href="#" style="color:#9ac7ff; font-weight:600;" onclick="event.preventDefault(); alert('Explore our departments section below');">Explore services →</a>
+        </div>
+      </div>
+      <div class="ai-preview-card" data-aos="fade-left" data-aos-delay="400">
+        <div class="ai-preview-header">
+          <i class="fas fa-robot"></i> HemoScan AI · instant anemia
+          <span class="ai-badge-small">LIVE</span>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0;">
+          <div style="background:#102e44; border-radius:25px; padding:12px;">HGB <strong>8.9 g/dL</strong></div>
+          <div style="background:#102e44; border-radius:25px; padding:12px;">MCH <strong>25.8 pg</strong></div>
+          <div style="background:#102e44; border-radius:25px; padding:12px;">MCV <strong>76.4 fL</strong></div>
+          <div style="background:#102e44; border-radius:25px; padding:12px;">MCHC <strong>30.1 g/dL</strong></div>
+        </div>
+        <div style="background:#143856; border-radius:40px; padding:15px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+          <span><i class="fas fa-exclamation-circle" style="color:#ffa070;"></i> Anemia risk: moderate</span>
+          <span style="background:#0055aa; padding:4px 18px; border-radius:60px;">95.2% conf</span>
+        </div>
+        <div style="margin-top:15px; background:#0b2840; border-radius:30px; padding:14px;">
+          <i class="fas fa-bell" style="color:#ff8866;"></i> Twilio alert simulated · on‑call notified
+        </div>
+        <p style="margin-top:15px;"><i class="fas fa-x-ray"></i> LLM imaging: Chest X‑ray, no acute findings.</p>
+      </div>
+    </div>
+
+    <!-- DEPARTMENTS -->
+    <div class="section-caption" data-aos="fade-up"><h2>Clinical departments & specialized AI</h2></div>
+    <div class="dept-grid">
+      <div class="dept-card" data-aos="flip-left" data-aos-delay="100"><div class="dept-icon"><i class="fas fa-droplet"></i></div><h3>Hematology</h3><p>Anemia risk (Ridge classifier), CBC analysis. 94% accuracy.</p></div>
+      <div class="dept-card" data-aos="flip-left" data-aos-delay="200"><div class="dept-icon"><i class="fas fa-brain"></i></div><h3>Neurology</h3><p>MRI auto‑reports by LLM, stroke assessment.</p></div>
+      <div class="dept-card" data-aos="flip-left" data-aos-delay="300"><div class="dept-icon"><i class="fas fa-heart-pulse"></i></div><h3>Cardiology</h3><p>ECG trends, echo AI measurements. Twilio alerts.</p></div>
+      <div class="dept-card" data-aos="flip-left" data-aos-delay="400"><div class="dept-icon"><i class="fas fa-x-ray"></i></div><h3>Radiology</h3><p>LLM X‑ray, MRI reports in seconds. Structured findings.</p></div>
+    </div>
+
+    <!-- EXTRA HOSPITAL FEATURES -->
+    <div class="section-caption" data-aos="fade-up"><h2>Comprehensive hospital services</h2></div>
+    <div class="extra-features">
+      <div class="feature-item" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-ambulance"></i><h3>Emergency 24/7</h3><p>Level 1 trauma center with rapid response AI triage.</p></div>
+      <div class="feature-item" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-flask"></i><h3>Advanced Lab</h3><p>Fully automated CBC, chemistry, and AI‑powered pathology.</p></div>
+      <div class="feature-item" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-procedures"></i><h3>ICU & Monitoring</h3><p>Real‑time vitals, AI early warning scores, tele-ICU.</p></div>
+      <div class="feature-item" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-baby"></i><h3>Maternal & Child</h3><p>Specialized anemia screening for pregnant women and children.</p></div>
+      <div class="feature-item" data-aos="zoom-in" data-aos-delay="500"><i class="fas fa-heartbeat"></i><h3>Cardiac Care</h3><p>AI echocardiography, remote monitoring, intervention lab.</p></div>
+      <div class="feature-item" data-aos="zoom-in" data-aos-delay="600"><i class="fas fa-lungs"></i><h3>Pulmonary</h3><p>Lung CT analysis, spirometry AI, COPD management.</p></div>
+    </div>
+
+    <!-- AI SHOWCASE -->
+    <div class="ai-showcase" data-aos="fade-up" data-aos-duration="1200">
+      <div data-aos="fade-right"><h2 style="font-size:clamp(2rem,5vw,3rem);">Your hospital copilot</h2><ul style="list-style:none; font-size:clamp(1rem,2.5vw,1.2rem);"><li><i class="fas fa-check-circle"></i> Real‑time anemia detection</li><li><i class="fas fa-check-circle"></i> LLM radiology assistant</li><li><i class="fas fa-check-circle"></i> Emergency alerts via Twilio</li></ul><button class="btn-light" onclick="demoAlert()"><i class="fas fa-play"></i> See live demo</button></div>
+      <div style="background:#ffffff10; border-radius:50px; padding:30px;" data-aos="fade-left"><i class="fas fa-chart-line" style="font-size:clamp(2rem,5vw,3rem);"></i><h3 style="font-size:clamp(2rem,5vw,2.5rem);">95.21%</h3><p>confidence (14k samples)</p></div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="section-caption" data-aos="fade-up"><h2>Leading medical & AI team</h2></div>
+    <div class="team-grid">
+      <div class="doctor-card" data-aos="flip-right" data-aos-delay="100"><div class="doctor-img"><i class="fas fa-user-md"></i></div><h3>Dr. Sarah Chen</h3><p>Chief of Hematology</p></div>
+      <div class="doctor-card" data-aos="flip-right" data-aos-delay="200"><div class="doctor-img"><i class="fas fa-user-tie"></i></div><h3>Dr. Michael Okafor</h3><p>Medical director</p></div>
+      <div class="doctor-card" data-aos="flip-right" data-aos-delay="300"><div class="doctor-img"><i class="fas fa-user-nurse"></i></div><h3>Dr. Priya Kapoor</h3><p>Head of radiology AI</p></div>
+    </div>
+
+    <!-- TESTIMONIAL -->
+    <div class="testimonial-block" data-aos="fade-up" data-aos-duration="1000">
+      <i class="fas fa-quote-left" style="font-size:clamp(2rem,5vw,3rem);"></i>
+      <p>“The AI anemia detection alerted us to a critical patient 6 hours earlier than traditional labs. Absolutely life‑saving.”</p>
+      <p style="margin-top:15px;"><strong>— Dr. Elena Voss, ER director</strong></p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="quick-links" data-aos="fade-up" data-aos-duration="800">
+      <div data-aos="fade-right" data-aos-delay="100"><h3><i class="fas fa-briefcase-medical"></i> For patients</h3><p>Appointment, medical records, patient portal.</p></div>
+      <div data-aos="fade-up" data-aos-delay="200"><h3><i class="fas fa-flask"></i> Research</h3><p>Clinical trials, AI ethics board, publications.</p></div>
+      <div data-aos="fade-left" data-aos-delay="300"><h3><i class="fas fa-globe"></i> Locations</h3><p>6 cities · 12 clinics. Find nearest facility.</p></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div><h4>HemoScan Health</h4><p>2500 Medical Center Drive<br>Philadelphia, PA 19104</p></div>
+        <div><h4>Departments</h4><p>Hematology · Cardiology · Neurology · Radiology · AI Diagnostics</p></div>
+        <div><h4>Contact</h4><p><i class="fas fa-phone"></i> 9876543210<br><i class="fas fa-envelope"></i> hello@hemoscan.org</p></div>
+        <div><h4>Follow</h4><i class="fab fa-linkedin fa-2x"></i> <i class="fab fa-twitter fa-2x" style="margin-left:15px;"></i></div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 HemoScan Health Network. All rights reserved. HIPAA compliant.</div>
+    </footer>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="Index.js"></script>
+</body>
+</html>

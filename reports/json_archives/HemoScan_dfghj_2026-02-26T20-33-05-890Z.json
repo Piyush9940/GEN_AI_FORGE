@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_dfghj_2026-02-26T20-33-05-890Z",
+    "generatedAt": "2026-02-26T20:33:05.905Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "dfghj",
+    "age": 54,
+    "gender": "female",
+    "mob_no": "8956256566",
+    "hb": 5,
+    "pcv": 2,
+    "mch": 5,
+    "rbc": 9,
+    "mcv": 2,
+    "mchc": 10
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 99.04
+    },
+    "patient_data": {
+      "name": "dfghj",
+      "age": 54,
+      "gender": "female",
+      "mob_no": 8956256566,
+      "hb": 5,
+      "pcv": 2,
+      "mch": 5,
+      "rbc": 9,
+      "mcv": 2,
+      "mchc": 10
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "dfghj",
+        "phone": "8956256566.0",
+        "age": 54,
+        "gender": "female"
+      },
+      "model_prediction": "Anemic",
+      "confidence_percent": 99.04,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 5,
+          "reference_range": "12.0 - 16.0 g/dL",
+          "status": "Low"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 9,
+          "reference_range": "4.2 - 5.4 x10^12/L",
+          "status": "High"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 2,
+          "reference_range": "37.0 - 47.0 %",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 2,
+          "reference_range": "80.0 - 100.0 fL",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 5,
+          "reference_range": "27.0 - 31.0 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 10,
+          "reference_range": "32.0 - 36.0 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The patient exhibits life-threatening severe microcytic hypochromic anemia. Hemoglobin (5.0 g/dL) and PCV (2.0%) are critically low. The MCV and MCH are extremely low, suggesting a profound defect in hemoglobin synthesis. While the RBC count is high (9.0), which can be a compensatory mechanism or a feature of Thalassemia, the values provided are physiologically extreme and require immediate clinical intervention and verification.",
+      "risk_level": "High",
+      "possible_anemia_type": [
+        "Severe Iron Deficiency Anemia",
+        "Thalassemia",
+        "Sideroblastic Anemia"
+      ],
+      "suggested_diagnostic_tests": [
+        "Peripheral Blood Smear",
+        "Serum Ferritin and Iron Studies (TIBC, Transferrin Saturation)",
+        "Hemoglobin Electrophoresis",
+        "Reticulocyte Count",
+        "Stool for Occult Blood"
+      ]
+    }
+  }
+}

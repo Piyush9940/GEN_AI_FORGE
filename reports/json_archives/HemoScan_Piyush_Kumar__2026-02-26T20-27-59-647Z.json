@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_Piyush_Kumar__2026-02-26T20-27-59-647Z",
+    "generatedAt": "2026-02-26T20:27:59.653Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "Piyush Kumar ",
+    "age": 21,
+    "gender": "m",
+    "mob_no": "9876542710",
+    "hb": 17.5,
+    "pcv": 34.2,
+    "mch": 26.5,
+    "rbc": 4.1,
+    "mcv": 82,
+    "mchc": 31.5
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Not Anemic",
+      "confidence_percent": 21.83
+    },
+    "patient_data": {
+      "name": "Piyush Kumar ",
+      "age": 21,
+      "gender": "m",
+      "mob_no": 9876542710,
+      "hb": 17.5,
+      "pcv": 34.2,
+      "mch": 26.5,
+      "rbc": 4.1,
+      "mcv": 82,
+      "mchc": 31.5
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "Piyush Kumar",
+        "phone": "9876542710.0",
+        "age": 21,
+        "gender": "m"
+      },
+      "model_prediction": "Not Anemic",
+      "confidence_percent": 21.83,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 17.5,
+          "reference_range": "13.5 - 17.5 g/dL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 4.1,
+          "reference_range": "4.5 - 5.9 million/µL",
+          "status": "Low"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 34.2,
+          "reference_range": "41 - 50 %",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 82,
+          "reference_range": "80 - 100 fL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 26.5,
+          "reference_range": "27 - 33 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 31.5,
+          "reference_range": "32 - 36 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The patient's Hemoglobin is at the upper limit of normal, which aligns with the 'Not Anemic' prediction. However, there is a significant clinical discrepancy: the RBC count and PCV (Hematocrit) are both low, which contradicts the high Hemoglobin level (violating the Rule of Three). Additionally, the MCH and MCHC are low, indicating hypochromic cells. The extremely low confidence of the ML model (21.83%) likely reflects these contradictory data points. This profile could suggest a laboratory error, or a complex state such as early iron deficiency or a hemoglobinopathy masked by other factors.",
+      "risk_level": "Moderate",
+      "possible_anemia_type": [
+        "None (based on Hemoglobin)",
+        "Hypochromic state",
+        "Potential Iron Deficiency Anemia (early stage)"
+      ],
+      "suggested_diagnostic_tests": [
+        "Repeat CBC for verification",
+        "Peripheral Blood Smear examination",
+        "Serum Iron Studies",
+        "Serum Ferritin",
+        "Reticulocyte Count"
+      ]
+    }
+  }
+}

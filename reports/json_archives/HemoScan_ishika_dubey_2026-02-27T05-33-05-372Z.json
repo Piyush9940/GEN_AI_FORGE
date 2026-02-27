@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_ishika_dubey_2026-02-27T05-33-05-372Z",
+    "generatedAt": "2026-02-27T05:33:05.373Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "ishika dubey",
+    "age": 99,
+    "gender": "female",
+    "mob_no": "9468213961",
+    "hb": 5,
+    "pcv": 5,
+    "mch": 5,
+    "rbc": 5,
+    "mcv": 5,
+    "mchc": 5
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 99.5
+    },
+    "patient_data": {
+      "name": "ishika dubey",
+      "age": 99,
+      "gender": "female",
+      "mob_no": 9468213961,
+      "hb": 5,
+      "pcv": 5,
+      "mch": 5,
+      "rbc": 5,
+      "mcv": 5,
+      "mchc": 5
+    },
+    "clinical_report": {
+      "error": "Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+    }
+  }
+}

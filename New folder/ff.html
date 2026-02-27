@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technovative | Clinical Intelligence Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5fb4;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --danger: #dc2626;
+            --warning: #f59e0b;
+            --success: #10b981;
+            --dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .brand-info h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-info p {
+            margin: 5px 0 0;
+            color: var(--secondary);
+            font-size: 14px;
+        }
+
+        .sync-btn {
+            background-color: #334155;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .sync-btn:hover {
+            background-color: #1e293b;
+            transform: translateY(-2px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            background-color: #f8fafc;
+            color: var(--primary);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #edf2f7;
+        }
+
+        td {
+            padding: 18px 15px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        .risk-badge {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .risk-Moderate { background-color: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .risk-High { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+        .risk-Normal { background-color: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+
+        .action-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .view-report-btn {
+            text-decoration: none;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .notify-btn {
+            background-color: var(--dark);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            min-width: 90px;
+            justify-content: center;
+        }
+
+        .notify-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+        .notify-btn:hover { background-color: #1e293b; }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <div class="header">
+        <div class="brand-info">
+            <h1><i class="fas fa-satellite-dish"></i> Clinical Live Feed</h1>
+            <p>Technovative HemoScan • Intelligence Unit</p>
+        </div>
+        <button class="sync-btn" onclick="fetchArchives()">
+            <i class="fas fa-sync-alt"></i> Sync Archives
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Patient Details</th>
+                <th>Hb Levels</th>
+                <th>AI Prediction</th>
+                <th>Risk Level</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="feedTable"></tbody>
+    </table>
+</div>
+
+<script>
+    const API_BASE = "http://localhost:5000/api/dashboard";
+
+    async function fetchArchives() {
+        const tableBody = document.getElementById('feedTable');
+        tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:40px;">⏳ Synchronizing archives...</td></tr>';
+        
+        try {
+            const response = await fetch(`${API_BASE}/feed`);
+            const data = await response.json();
+            
+            tableBody.innerHTML = '';
+
+            if (!data || data.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:40px;">No clinical records found in archive.</td></tr>';
+                return;
+            }
+
+            tableBody.innerHTML = data.map(item => {
+                const dateObj = new Date(item.timestamp);
+                const formattedDate = dateObj.toLocaleDateString() + ' ' + dateObj.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                
+                return `
+                <tr>
+                    <td>
+                        <div style="font-weight:700; color:#1e293b">${item.patientName}</div>
+                        <small style="color:#64748b; font-size:11px"><i class="far fa-clock"></i> ${formattedDate}</small>
+                    </td>
+                    <td>
+                        <b style="color:${item.risk === 'High' ? 'var(--danger)' : 'var(--dark)'}">${item.hb} g/dL</b>
+                    </td>
+                    <td>
+                        <div style="font-weight:600">${item.status}</div>
+                    </td>
+                    <td>
+                        <span class="risk-badge risk-${item.risk}">${item.risk}</span>
+                    </td>
+                    <td>
+                        <div class="action-group">
+                            <a href="/reports/pdf_reports/${item.reportID}.pdf" target="_blank" class="view-report-btn">
+                                <i class="far fa-file-pdf"></i> View
+                            </a>
+                            <button onclick="sendSmsAlert(this, '${item.reportID}')" class="notify-btn">
+                                <i class="fas fa-paper-plane"></i> Notify
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;}).join('');
+
+        } catch (error) {
+            console.error("❌ Sync Error:", error);
+            tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:red; padding:40px;">Failed to connect to HemoScan Server.</td></tr>';
+        }
+    }
+
+    async function sendSmsAlert(btn, reportID) {
+        if (!reportID || reportID === 'undefined') {
+            alert("⚠️ Error: Invalid Report ID.");
+            return;
+        }
+
+        if(!confirm(`Trigger emergency SMS alert for this record?`)) return;
+
+        // UI Loading state
+        const originalContent = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
+
+        try {
+            const res = await fetch(`${API_BASE}/send-alert`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ reportID: reportID })
+            });
+            const result = await res.json();
+            
+            if (result.success) {
+                btn.style.backgroundColor = "var(--success)";
+                btn.innerHTML = '<i class="fas fa-check"></i> Sent';
+                setTimeout(() => {
+                    btn.style.backgroundColor = "";
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
+                }, 3000);
+            } else {
+                throw new Error(result.error || "Server error");
+            }
+        } catch (err) {
+            console.error(err);
+            btn.style.backgroundColor = "var(--danger)";
+            btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed';
+            setTimeout(() => {
+                btn.style.backgroundColor = "";
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+            }, 3000);
+        }
+    }
+
+    // Auto-load on entry
+    window.onload = fetchArchives;
+</script>
+
+</body>
+</html>

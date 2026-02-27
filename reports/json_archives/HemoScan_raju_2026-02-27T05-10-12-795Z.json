@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_raju_2026-02-27T05-10-12-795Z",
+    "generatedAt": "2026-02-27T05:10:12.797Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "raju",
+    "age": 54,
+    "gender": "female",
+    "mob_no": "9468213961",
+    "hb": 1,
+    "pcv": 3,
+    "mch": 5,
+    "rbc": 2,
+    "mcv": 4,
+    "mchc": 6
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 99.33
+    },
+    "patient_data": {
+      "name": "raju",
+      "age": 54,
+      "gender": "female",
+      "mob_no": 9468213961,
+      "hb": 1,
+      "pcv": 3,
+      "mch": 5,
+      "rbc": 2,
+      "mcv": 4,
+      "mchc": 6
+    },
+    "clinical_report": {
+      "error": "Gemini Error: 400 API key expired. Please renew the API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key expired. Please renew the API key.\"\n]"
+    }
+  }
+}

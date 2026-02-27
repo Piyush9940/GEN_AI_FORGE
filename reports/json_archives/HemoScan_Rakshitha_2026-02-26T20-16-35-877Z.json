@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "reportID": "HemoScan_Rakshitha_2026-02-26T20-16-35-877Z",
+    "generatedAt": "2026-02-26T20:16:35.880Z",
+    "institution": "Technovative"
+  },
+  "patientInput": {
+    "name": "Rakshitha",
+    "mob_no": "8088879417",
+    "age": "32",
+    "gender": "female",
+    "hb": "10.9",
+    "rbc": "4.26",
+    "pcv": "34.2",
+    "mcv": "80.2",
+    "mch": "25.5",
+    "mchc": "31.8"
+  },
+  "aiAnalysis": {
+    "status": "success",
+    "model_info": {
+      "prediction": "Anemic",
+      "confidence_percent": 99.33
+    },
+    "patient_data": {
+      "name": "Rakshitha",
+      "age": 32,
+      "gender": "female",
+      "mob_no": 8088879417,
+      "hb": 10.9,
+      "pcv": 34.2,
+      "mch": 25.5,
+      "rbc": 4.26,
+      "mcv": 80.2,
+      "mchc": 31.8
+    },
+    "clinical_report": {
+      "patient_info": {
+        "name": "Rakshitha",
+        "phone": "8088879417.0",
+        "age": 32,
+        "gender": "female"
+      },
+      "model_prediction": "Anemic",
+      "confidence_percent": 99.33,
+      "cbc_analysis": [
+        {
+          "parameter": "Hemoglobin",
+          "patient_value": 10.9,
+          "reference_range": "12.0 - 15.5 g/dL",
+          "status": "Low"
+        },
+        {
+          "parameter": "RBC",
+          "patient_value": 4.26,
+          "reference_range": "3.8 - 5.2 million/µL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "PCV",
+          "patient_value": 34.2,
+          "reference_range": "36 - 46%",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCV",
+          "patient_value": 80.2,
+          "reference_range": "80 - 100 fL",
+          "status": "Normal"
+        },
+        {
+          "parameter": "MCH",
+          "patient_value": 25.5,
+          "reference_range": "27 - 33 pg",
+          "status": "Low"
+        },
+        {
+          "parameter": "MCHC",
+          "patient_value": 31.8,
+          "reference_range": "32 - 36 g/dL",
+          "status": "Low"
+        }
+      ],
+      "clinical_interpretation": "The patient exhibits mild anemia as evidenced by low hemoglobin and hematocrit (PCV) levels. Although the MCV is within the lower limit of the normal range, the low MCH and MCHC values indicate hypochromic red blood cells. This pattern is highly suggestive of early-stage iron deficiency anemia or anemia of chronic disease.",
+      "risk_level": "Moderate",
+      "possible_anemia_type": [
+        "Iron Deficiency Anemia",
+        "Anemia of Chronic Disease",
+        "Thalassemia Trait"
+      ],
+      "suggested_diagnostic_tests": [
+        "Serum Ferritin",
+        "Iron Studies (Serum Iron, TIBC, Transferrin Saturation)",
+        "Peripheral Blood Smear",
+        "Reticulocyte Count"
+      ]
+    }
+  }
+}
